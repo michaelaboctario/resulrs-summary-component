@@ -1,1 +1,1 @@
-# resulrs-summary-component
+# results-summary-component
