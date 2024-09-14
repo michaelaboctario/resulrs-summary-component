@@ -40,6 +40,11 @@
     --clr-neutral-200: hsl(var(--clr-neutral-hsl-200));
     --clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
     --clr-neutral-700: hsl(var(--clr-neutral-hsl-700));    
+
+    --clr-accent-1: 0, 100%, 67%;
+    --clr-accent-2: 39, 100%, 56%;
+    --clr-accent-3: 166, 100%, 37%;
+    --clr-accent-4: 234, 85%, 45%;
 }
 
 
@@ -119,6 +124,75 @@
     font-weight: 700;
   }
 
+/* summary */
+
+  .card__details__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2.5rem;
+  }
+
+  .card__details__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 18rem;
+  } 
+  
+  /* .card__details__content {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  } */
+
+  .card__details__ligne {
+    display: flex;
+   /*  justify-content: space-between; */
+    align-items: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(var(--item-color), .1);
+    width: 100%;
+  }
+
+  .card__details__ligne[data-item-type="item-1"] {
+    --item-color: var(--clr-accent-1);
+  }
+  .card__details__ligne[data-item-type="item-2"] {
+    --item-color: var(--clr-accent-2);
+  }
+  .card__details__ligne[data-item-type="item-3"] {
+    --item-color: var(--clr-accent-3);
+  }
+  .card__details__ligne[data-item-type="item-4"] {
+    --item-color: var(--clr-accent-4);
+  }
+
+  .card__details__ligne svg {
+    stroke: hsl(var(--item-color));
+  }
+  
+  .ligne__title {
+    color: hsl(var(--item-color));
+    font-weight: 700;
+    margin-left: 1rem;
+  } 
+  
+  .ligne__score {
+    font-weight: 900;
+    color: hsl(var(--clr-neutral-hsl-700), .5);
+    margin-left: auto;
+  }
+  
+  .ligne__score span {
+    color: var(--clr-neutral-700);
+  }
+
 @media (min-width: 768px) {
     body {
       min-height: 100vh;
@@ -135,5 +209,9 @@
       }
       .card__result {
         border-radius: 2rem;
+      }
+
+      .card__details__content {
+        margin-left: 2rem;
       }
   }
