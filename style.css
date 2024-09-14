@@ -83,7 +83,7 @@
     text-align: center;
     padding: 2.5rem 3.75rem;
     background: var(--gradient-primary);
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 0 0 2rem 2rem;
     display: grid;
     align-content: start;
     gap: 2rem;
@@ -137,9 +137,10 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75vw;
+    max-width: 16rem;
   } 
   
   /* .card__details__content {
@@ -188,10 +189,28 @@
     color: hsl(var(--clr-neutral-hsl-700), .5);
     margin-left: auto;
   }
-  
+   
   .ligne__score span {
     color: var(--clr-neutral-700);
   }
+
+  .card__button {
+    color: var(--clr-neutral-100); 
+    line-height: 1;
+    background: var(--clr-neutral-700);
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 100vw;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .card__button:hover,
+  .card__button:focus-visible {
+    background: var(--gradient-primary);
+  }
+  
 
 @media (min-width: 768px) {
     body {
